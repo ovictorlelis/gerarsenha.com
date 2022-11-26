@@ -38,124 +38,126 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <button id="logo" class="generate">
-        <img src="logo.svg" alt="Gerar Senha" />
-      </button>
-
-      <p class="message"></p>
-
-      <div id="password">
-        <input type="text" id="generated" disabled />
-        <button id="copy">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="#000000"
-            viewBox="0 0 256 256"
-          >
-            <rect width="256" height="256" fill="none"></rect>
-            <polyline
-              points="168 168 216 168 216 40 88 40 88 88"
-              fill="none"
-              stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></polyline>
-            <rect
-              x="40"
-              y="88"
-              width="128"
-              height="128"
-              fill="none"
-              stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></rect>
-          </svg>
+    <div>
+      <main>
+        <button id="logo" class="generate">
+          <img src="logo.svg" alt="Gerar Senha" />
         </button>
-        <button class="generate">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="#000000"
-            viewBox="0 0 256 256"
-          >
-            <rect width="256" height="256" fill="none"></rect>
-            <polyline
-              points="176.2 99.7 224.2 99.7 224.2 51.7"
-              fill="none"
-              stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></polyline>
-            <path
-              d="M65.8,65.8a87.9,87.9,0,0,1,124.4,0l34,33.9"
-              fill="none"
-              stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></path>
-            <polyline
-              points="79.8 156.3 31.8 156.3 31.8 204.3"
-              fill="none"
-              stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></polyline>
-            <path
-              d="M190.2,190.2a87.9,87.9,0,0,1-124.4,0l-34-33.9"
-              fill="none"
-              stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></path>
-          </svg>
-        </button>
-      </div>
 
-      <div id="custom">
-        <h2>Personalize sua senha</h2>
-        <div class="input-wrapper">
-          <input type="number" id="characters" value="8" />
-          <label for="characters">Número de caracteres</label>
+        <p class="message"></p>
+
+        <div id="password">
+          <input type="text" id="generated" disabled />
+          <button id="copy">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none"></rect>
+              <polyline
+                points="168 168 216 168 216 40 88 40 88 88"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polyline>
+              <rect
+                x="40"
+                y="88"
+                width="128"
+                height="128"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></rect>
+            </svg>
+          </button>
+          <button class="generate">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none"></rect>
+              <polyline
+                points="176.2 99.7 224.2 99.7 224.2 51.7"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polyline>
+              <path
+                d="M65.8,65.8a87.9,87.9,0,0,1,124.4,0l34,33.9"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></path>
+              <polyline
+                points="79.8 156.3 31.8 156.3 31.8 204.3"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polyline>
+              <path
+                d="M190.2,190.2a87.9,87.9,0,0,1-124.4,0l-34-33.9"
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></path>
+            </svg>
+          </button>
         </div>
 
-        <div class="checkbox-wrapper">
-          <div class="wrapper">
-            <input type="checkbox" name="custom" id="uppercase" checked />
-            <label for="uppercase">Letra maiúscula</label>
+        <div id="custom">
+          <h2>Personalize sua senha</h2>
+          <div class="input-wrapper">
+            <input type="number" id="characters" value="8" />
+            <label for="characters">Número de caracteres</label>
           </div>
 
-          <div class="wrapper">
-            <input type="checkbox" name="custom" id="lowercase" checked />
-            <label for="lowercase">Letra minúscula</label>
-          </div>
+          <div class="checkbox-wrapper">
+            <div class="wrapper">
+              <input type="checkbox" name="custom" id="uppercase" checked />
+              <label for="uppercase">Letra maiúscula</label>
+            </div>
 
-          <div class="wrapper">
-            <input type="checkbox" name="custom" id="numbers" checked />
-            <label for="numbers">Números</label>
-          </div>
+            <div class="wrapper">
+              <input type="checkbox" name="custom" id="lowercase" checked />
+              <label for="lowercase">Letra minúscula</label>
+            </div>
 
-          <div class="wrapper">
-            <input type="checkbox" name="custom" id="symbols" checked />
-            <label for="symbols">Símbolos</label>
+            <div class="wrapper">
+              <input type="checkbox" name="custom" id="numbers" checked />
+              <label for="numbers">Números</label>
+            </div>
+
+            <div class="wrapper">
+              <input type="checkbox" name="custom" id="symbols" checked />
+              <label for="symbols">Símbolos</label>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <footer>
-      <p><a href="//ovictorlelis.dev" target="_blank">Victor Lelis</a></p>
-    </footer>
+      <footer>
+        <p><a href="//ovictorlelis.dev" target="_blank">Victor Lelis</a></p>
+      </footer>
+    </div>
 
     <script>
       // This is the service worker with the Cache-first network
