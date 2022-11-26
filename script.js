@@ -25,7 +25,7 @@ generate.forEach((e) => {
     message.innerHTML = "";
 
     if (characters.value < 4) {
-      message.innerHTML = "Mínimo de 4 caracteres";
+      message.innerHTML = "Mínimo de quatro caracteres";
       return;
     }
 
@@ -36,8 +36,8 @@ generate.forEach((e) => {
       symbols.checked,
     ];
 
-    if (check.filter((e) => e == true).length < 2) {
-      message.innerHTML = "Selecione ao menos duas opção";
+    if (check.filter((e) => e == true).length == 0) {
+      message.innerHTML = "Selecione no mínimo uma opção";
       return;
     }
 
