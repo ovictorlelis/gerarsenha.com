@@ -1,0 +1,9 @@
+{
+  "name": "Gerar Senha",
+  "short_name": "Gerar Senha",
+  "theme_color": "#ecf0f1",
+  "background_color": "#ecf0f1",
+  "display": "standalone",
+  "scope": "/index.html",
+  "start_url": "/"
+}

@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerar Senha</title>
 
+    <meta name="theme-color" content="#ecf0f1" />
+
     <meta name="title" content="Gerar Senha" />
     <meta name="description" content="Gerador de senhas segura" />
     <link rel="icon" type="image/png" sizes="16x16" href="/icon.svg" />
@@ -20,6 +22,13 @@
     <meta property="twitter:url" content="https://gerarsenha.com/" />
     <meta property="twitter:title" content="Gerar Senha" />
     <meta property="twitter:description" content="Gerador de senhas segura" />
+
+    <link rel="canonical" href="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ecf0f1" />
+    <meta name="apple-mobile-web-app-title" content="Gerar Senha" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="manifest" href="manifest.json" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
@@ -148,6 +157,30 @@
       <p><a href="//ovictorlelis.dev" target="_blank">Victor Lelis</a></p>
     </footer>
 
+    <script>
+      // This is the service worker with the Cache-first network
+      // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+      // Check compatibility for the browser we're running this in
+      if ("serviceWorker" in navigator) {
+        if (navigator.serviceWorker.controller) {
+          console.log(
+            "[PWA Builder] active service worker found, no need to register"
+          );
+        } else {
+          // Register the service worker
+          navigator.serviceWorker
+            .register("sw.js", {
+              scope: "./",
+            })
+            .then(function (reg) {
+              console.log(
+                "[PWA Builder] Service worker has been registered for scope: " +
+                  reg.scope
+              );
+            });
+        }
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
